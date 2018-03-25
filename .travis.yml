@@ -28,7 +28,7 @@ after_script:
   - git config user.email "hengliang.jia@gmail.com"
   - git add .
   - git commit -m "Travis CI build"
-  - git push --force --quiet "https://${GH_TOKEN}@${GIT_PAGE_REF}" master:master
+  - git push --force "https://${GH_TOKEN}@${GIT_PAGE_REF}" master:master
   # if it isn't a user/org page, please replace it with <master:gh-pages>
   
 

@@ -74,6 +74,19 @@ deploy:
   branch: master
   name: hengliang
   eamil: hengliang.jia@gmail.com
-  message: add more tips
+  # message: 
 
+# - - -
 
+# Configurations for the theme `Next`.
+## Need use Travis CI to replace placeholder variables.
+
+# Google Analytics
+google_analytics: #[GA_TOKEN]
+
+# Show number of visitors to each article.
+# You can visit https://leancloud.cn get AppID and AppKey.
+leancloud_visitors:
+  enable: true
+  app_id: #[LEANCLOUND_ID]
+  app_key: #[#LEANCLOUND_KEY]

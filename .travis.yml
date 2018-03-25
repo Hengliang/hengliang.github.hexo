@@ -1,0 +1,60 @@
+language: node_js
+node_js: stable
+
+cache:
+  directories:
+    - node_modules
+    # The `next-door` from `hengliang.github.hexo-theme-next`
+    - themes/next-door
+
+install:
+  - npm install
+
+before_script:
+  - npm install -g gulp
+  - git clone https://github.com/Hengliang/hexo-theme-next.git --branch hengliang@develop.remote themes/next-door
+  - sed -i -e 's/#\[GA_TOKEN\]/${GA_TOKEN}/g' _config.yml
+  - sed -i -e 's/#\[LEANCLOUD_ID\]/${LEANCLOUD_ID}/g' _config.yml
+  - sed -i -e 's/#\[LEANCLOUD_KEY\]/${LEANCLOUD_KEY}/g' _config.yml
+
+script:
+  - gulp build
+
+after_script:
+  - cd public
+  - git init
+  - git config user.name "hengliang"
+  - git config user.email "hengliang.jia@gmail.com"
+  - git add .
+  - git commit -m "Travis CI build"
+  - git push --force --quiet "https://${GH_TOKEN}@${GIT_PAGE_REF}" master:master
+  # if it isn't a user/org page, please replace it with <master:gh-pages>
+  
+
+branches:
+  only:
+    - master
+
+# Travis Environment Variables Guild
+# https://docs.travis-ci.com/user/environment-variables
+env:
+  global:
+    - GIT_PAGE_REF: github.com/Hengliang/hengliang.github.hexo
+    # GH_TOKEN
+    - secure: 4tYzWjL1xig9xFg1rGTgn3qIPzzhwn/H8/t/nthTXuWeFX5vOlVDv2VVXAw5t2Uz4+rYoUSbbNxi5hyCprra9SRGSuoi27mif0uhU0UA5CNbvSOC3BnETkSj65p97HbGI0sKop4SLqp/ztOKk4eyYd2sXEniCDSjzE7xBhc2QS/5X38RR/pGO7EYaZP1UZPN83JRBB9L/s443wnRnX1QGDLoHm2UCcQ6wwIHDi+nzgAlRmeNmE/dBPbURhHB6HWkztmBiyu8tx/KpXRVlOqUOa+GHs52YKzCo3f3GCCwSliCbKAbUfQ9kwfuC2vwDIaYtwTlMte3Ch/0g5X3LJJKSJ91454Mn6pIYr5caw4w3lLLwOib73uFUzhyfvmpGdPuODFdCqWvfmrk+0MuPrJGodP58epwkQEmYMJxTnMje4yY+lv+DGmXnWnaeoNYuzOqhXFayfNstKJTLf3cwr8hSsed+OjoVu3bec9MnVKky6SMTgIq/vxuJ43CbQkACUsPls+nLpH59O9Ntu7TGNI+6I+aYRS2BYJ13dVZE2aS7wBe2bOf0T28RF+R7ibpeqDy9w398TQ3jCKB4LssqD/Sw5SakW9igmq/MIid07gDKHGJHJa9Np9BD244mAaVXshAqC4tC8B6NcF8f0JpnxIVSvIJTS7FU0nfvGtbLFPyNGo=
+    # GA_TOKEN
+    - secure: "tUNm77Sxs61cqZa+7MwiwuTRBtT8+/rEkjGt2M/qiJGtQxHLlXcGTk4J+hVZYAQBoHYD7cM3cEOtCLBLE618zbqUXFDI+9NXsiBQTfS1NQObmOfPJKQHmWuvFxkV92MPzFqR5XfNJjf/tU7T1/VfSM7uBn3n4xqzDwJNFXByD0ldnxY7YC5tqOYlc4vht+qatLPgXcAiqL8ocfdcZMNqC6Dgx9oy7uMtd5tBtE6OuBHOpzMb81jMmrZmgIqjZaNpHNmzNJiqTVvhwrKHHhf4mLBIK/P7rwD0dZ8EUn1cx6ER0jNhpO5fChDkDN7v/2vjAY7g0K69/Fhuoq6eWmeMkkS3M3L4FRJSzb0hiCoYem08yCZev0kMhEnUQwP6JYuOxtYc/bQypqX/LzaYruhZqMQiVy+lL7WyCFMggxeO5vfj2A1pbzgu8UW0H7NkQKYIASR0BZTIUwVxLSpFVwd1M2MD4LFVnj7iusdakKPxBnyeggRvJVj1EdEDxj9gFk2U3IrACgif/9GO8GUN+gJ4YEVtw2kVp3gK5jL0BcXBztV5PpCqnHWG/vuyjoVdD+GXNHpC657vBJfyrRfjkAmRjnpLzPrGSXrhpFWBEXNeIti90bfOQ9wSwF1vWjGX1jsRoBld8IAylN+OXoBxT2YV2Q8vjsaUlbB31tYn5/fVR/8="
+    # LEANCLOUD_ID
+    - secure: "31f2oG/9cNkvytv5VUmEq2HmlGBhKQxfvHP3IkqzVruqUSrZswk3HAcYOKL5ZVncMhEJZk4Rqo7OwEPQg/9qCi2TcCPTwRwc/M3K8aSS61C7/zBFC7E8AvVmrwGUxAAuseERe6WDnYW5yKJduYZ0rONjVJfva2sDJKqB3HgYkCI/SinlC5OJhfsxou2rN13mKzJl25rNsG1004r+L/twY4G1HkCOLWBUKcxlEElmhtOBsS76RiwXISuKcfyJAMbhzIXO1xwlvAfePs0ZF6N1f3+HmtZyPi5zEs7ofV2ypJacFIisr/4yNFzUl2ItpO3wyxyTnK3ahnfGnqBpRpdVNSuOURSSJd8QjtgEjJNklpBHLa7WxNxbViCQ4vaK2g+BJhlT7/G5ivADMBWo68WjtVRJfp6pAoOdxnc7OBrFyecQBYnGmhGyIPlvNka7YP73Q8mspxGa/rJkIPTthzL9KMBFmb+5X2IBihK3CA6CqKM2UkUrFppootTEJqHjr7YSxfX5RqJ4jX7qTOipM7tEoAGKf3K0uo4aTZJmRVxRMnD/9uUQwzIwC0TOnQJ3EA1uPJeAj0nWNboa/dqAmlNS1kXTHUnrKzOHRZBKnyOpgzsbw5DWbHuChRj4YGM5ljzbDqKCOJEs+WBZsQMEuJk3mX923wrNBY1eND3qvZ7i5ys="
+    # LEANCLOUD_KEY
+    - secure: "0EkYUNkRWDS2iu/KDeo6LwnKDzCo9kA8abDEOJyyb1Sa9q8DZ45X8cw2aJ7MKD1EbhOwjFisgg9gEwvgu7xEpFmARdZ2yzR/QdBNkeoTIMTatl6FP7a1S1ek0wK1Pm6T43tyIBe74Q/wclxvRvvRxjnPBbnLn3fIWL0+bg18dwVjsX1g1lS8jmJAWK4q5rhvxx1XYPDGDs5M/vFXqIuNuo73JS6Us65QvzXAEkB1q5L+68151Rv/440iFCsKsM0LUr42Lwc1hJB9ZrOxoyzh13aT8AVFLr9xZV+V/vwwKVfahbtg3cStye4YrOjFwQ8OqIHBwwxfTpFVnfLhjlwh2Q4eEBESycenBsD8y3e7PkDebDX566CGGJnuOJVQa/lJ9HxJio1TmT5LFq8Lm12S1xRnVLO/uFgZCdlojMgxN0RPkw0SLCBkzUywI4Zxw3YNxnhSFMl/K9q+Cj5u5Qpz2TVxtDEY2A6N8Z5/AyOYt9Qdj6IUf3t0dLoCNsTKXTJ8MY29FCN1GLxwfXM5DL0dZUlS1zQRnO2JNUDVBvaUUfbkFYP7VVThOTpsy+hdh33pqYoz3GTj6eObhV+FQEUuE0WJsbz8nY3cjolztyinspo6tkGV+28FtUN0pmt5AFf8dDaCKSD/2mVEph1EugvhlEvGf/C8ANVaCP0UsfmJSzU="
+
+   
+# configure notifications (email, IRC, campfire etc)
+# please update this section to your needs!
+# https://docs.travis-ci.com/user/notifications/
+notifications:
+  email:
+    - hengliang.jia@gmail.com
+  on_success: change
+  on_failure: always

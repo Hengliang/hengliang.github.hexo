@@ -10,7 +10,7 @@ var Hexo = require('hexo');
 
 
 gulp.task('clean', function() {
-    return del(['public/**/*']);
+    return del(['public/**/*', 'db.json', 'themes/**/*']);
 });
 
 // generate html with 'hexo generate'

@@ -1,0 +1,20 @@
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+themes/
+.deploy*/
+
+# IDEA files
+.idea/
+*.iml
+*.log
+
+# Other files
+tmp/
+coverage/
+.bin/
+.deploy_git/
+.npmignore

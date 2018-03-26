@@ -1,3 +1,9 @@
+[![Build Status](https://travis-ci.org/Hengliang/hengliang.github.hexo.svg?branch=master)](https://travis-ci.org/Hengliang/hengliang.github.hexo)
+
+---
+
+~( ゜▽゜)つロ  **NICE TO MEET YOU!**  🍻
+
 ```
 
  __   __  _______  ______    ___   _______  __   _______   
@@ -18,3 +24,5 @@
 ```
 
 Powered by [HEXO](https://hexo.io), with ❤️.
+
+![励志小企鹅](http://7xrkrd.com1.z0.glb.clouddn.com/ambitious-penguin.gif)

@@ -1,0 +1,89 @@
+# Configurations for the theme `Next`.
+## Need use Travis CI to replace placeholder variables.
+
+### Foundation configs
+
+favicon:
+    small: /favicon.ico
+    medium: /favicon.ico
+    apple_touch_icon: /favicon.ico
+    safari_pinned_tab: /favicon.ico
+
+keywords: "Tech, Coffee, Mac, Programming"
+
+footer:
+  icon: heart
+  copyright: MARIO
+  # -------------------------------------------------------------
+  # Hexo link (Powered by Hexo).
+  powered: true
+  theme:
+    # Theme & scheme info link (Theme - NexT.scheme).
+    enable: true
+    # Version info of NexT after scheme info (vX.X.X).
+    version: true
+
+# Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog.
+# See: https://support.google.com/webmasters/answer/139066
+# Tips: Before you open this tag, remember set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )
+canonical: true
+
+# Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
+seo: true
+
+# If true, will add site-subtitle to index page, added in main hexo config.
+# subtitle: Subtitle
+index_with_subtitle: true
+
+
+menu:
+  home: / || home
+  #about: /about/ || user
+  tags: /tags/ || tags
+  archives: /archives/ || archive
+  #schedule: /schedule/ || calendar
+  sitemap: /sitemap.xml || sitemap
+  #commonweal: /404/ || heartbeat
+
+scheme: Gemini
+
+# Social Links.
+# Usage: `Key: permalink || icon`
+# Key is the link label showing to end users.
+# Value before `||` delimeter is the target permalink.
+# Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
+social:
+  GitHub: https://github.com/Hengliang || github
+  EMail: mailto:hengliang.jia@gmail.com || envelope
+
+# Sidebar Avatar
+# in theme directory(source/images): /images/avatar.gif
+# in site  directory(source/uploads): /uploads/avatar.gif
+avatar: /avatar.png
+
+# Declare license on posts
+post_copyright:
+  enable: true
+  license: CC BY-NC-SA 3.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
+
+### Third Party Services Settings
+
+# Han Support docs: https://hanzi.pro/
+han: false
+
+# Disqus
+disqus:
+  enable: true
+  shortname:
+  count: true
+
+#### Google Analytics
+google_analytics: #[GA_TOKEN]
+
+#### Show number of visitors to each article.
+#### You can visit https://leancloud.cn get AppID and AppKey.
+leancloud_visitors:
+  enable: true
+  app_id: #[LEANCLOUND_ID]
+  app_key: #[#LEANCLOUND_KEY]

@@ -21,7 +21,7 @@ before_script:
 script:
   - gulp build
 
-after_script:
+after_success:
   - cd public
   - git init
   - git config user.name "hengliang"

@@ -40,13 +40,13 @@ branches:
 # https://docs.travis-ci.com/user/environment-variables
 env:
   global:
-    - GIT_PAGE_REF: github.com/Hengliang/hengliang.github.io
+    - GIT_PAGE_REF: "github.com/Hengliang/hengliang.github.io"
     # GH_TOKEN
     - secure: "LlDVhINBgamjNRBXnPQNba6Tf2UAvBMrFDs6qabIYNZcVcT1q2ckZNVpvttULcZRduoFbW0to7EiNfqNCbcsFFQ9FRv2B3qH2ns3jPRF1jS2ergVZOZmUX4qv6uFVqdttSN3EzpE7zWIYGfSfnIGubJZFWWPltIWKR6pucVAC4qF1n2Ypiq+QIazCsD/qFS+2hBL040RaSSbMZPIgGZE+KUR9+qpKG8ZaqjZMYSVoxYaXMN3QwJwVIPlzZhGzkObJ4cyCTAVg7GclgR74uWWdyFYK6kHvYHlSQ7+xhwkf4KqMFO5vHGAlNM7aNblc8IMVgjyJF1WBW4thfpS9yHoD4mFn1gAok0dO2sakY+P9TnBYBQoobWhup1Z1uLzpRzOK3fYfcpXIgz8iQQdPz4qZrZbril491MNylq3d/59W1vHj5p+LsbZp6a1hlms8U7zXBAn2/pW61uaOcnQU2nseYXRpdoSAa1OKlewR+x1IWWemARo4SU1R2NLsYmBVYlaStVfXYJ6Pe4hcjT9RTg+q9uOES5j5g8jC5BbCoon5LOmJKy8+Nar1o91dJs0MW5kNs2GyoTVV1TTZFAatSab+wXh6z3ScscW/zRRXZpiJQBXujvcauFyFOyp1AMtnZIIZhXjaagqhF7KfTjzeCwF6EQ3rpp6Is0UQkACznoAmAE="
     # GA_TOKEN
-    - GA_TOKEN: UA-76864579-2
+    - GA_TOKEN: "UA-76864579-2"
     # LEANCLOUD_ID
-    - LEANCLOUND: X0Uz4jdNqtk7pz5GfmX9tm4F-gzGzoHsz
+    - LEANCLOUND: "X0Uz4jdNqtk7pz5GfmX9tm4F-gzGzoHsz"
     # LEANCLOUD_KEY
     - secure: "TFOelhLscr7yluKdrCrYFDxnMmgWAcPMTwlfzn/MvhIASWuy7N+5/hsasBXXimF7VfmzsC03qCR5q9hqC1h0iQACOCQocR/2OIZVbmtixCb2BCFFGkrhSLs81SNmXbOi0nNs93LlRVtxwrbM0g4Onm9aRBWgOWCZcdrGy1XjblX8QD47FTwzWFhf2t/Ouy+Gdq5UAOLypsuGrSznPfvWWnuk5v78knD5XuhErSNU1tjAGRfReLnhQJokdlh0OIUBzJGycP+kUI4aetX1D4UTzQivWnOmjzumwM2NZW4Q9paIPg2jd+6MDDVcNaD/JEUZ8FMRIB9+Z4rbAIpEgilUQfsY7qOWX1v+xjcQnLLnFr9mqwPuE8LQYut39IhWBBLFgXXIqyRdBi1ZzkE51cNKImSNdCCGGysuHQ01cM/coQEX+gVtMz4uajdQ9WZqe9WFzm6I0IzvF4zAspd6Rw6PJirZmZRhY+2NYKPbrovqe4m3sGwRwYdswM3M2d5PKGxyflTDEatJta3VSl/Xu8nazEi7i/vg46swXVW+6oJHxZBiKpKsmOqSjwZ17DYSm6XkqyWQHx7lHR1YnEL81v6b3Mc1KJRHNHfOfGaVGIHIf5/X5NznEBhLWSprZpNixfeOlcs/IhD60xVq+f+MLdr5+sgLvsQI+sK6QQN0qJ5cWEc="
 

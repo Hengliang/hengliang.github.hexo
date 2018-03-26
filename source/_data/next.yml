@@ -76,7 +76,7 @@ han: false
 # Disqus
 disqus:
   enable: true
-  shortname:
+  shortname: techoffee
   count: true
 
 #### Google Analytics

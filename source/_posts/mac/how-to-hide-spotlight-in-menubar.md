@@ -1,5 +1,5 @@
 ---
-title: 'MacOS:怎样移除菜单栏上`Spotlight`的小图标'
+title: MacOS × 怎样移除菜单栏上Spotlight的小图标
 date: 2017-12-10 16:47:20
 tags:
   - mac

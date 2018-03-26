@@ -1,5 +1,5 @@
 ---
-title: 'Hexo Tricks'
+title: 'HEXO × 样式实践笔记'
 date: 2016-05-21 22:12:38
 tags:
   - hexo

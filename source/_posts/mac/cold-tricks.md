@@ -1,5 +1,5 @@
 ---
-title: MacOS:冷门小技巧
+title: MacOS × 冷门小技巧
 date: 2016-05-20 23:25:15
 tags: 
  - mac
@@ -42,7 +42,6 @@ tags:
 
 <video id="video-customized-avatar" controls 
     width="100%"
-    poster="unbelievable.png" 
     src="http://7xrkrd.com1.z0.glb.clouddn.com/how-to-change-avatar.mp4">
 </video>
 

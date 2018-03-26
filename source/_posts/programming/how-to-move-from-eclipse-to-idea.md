@@ -1,5 +1,5 @@
 ---
-title: Eclipse老司机如何优雅的使用IDEA
+title: ECLIPSE熟手尝试IDEA实践指南
 tags:
   - programming
   - eclipse

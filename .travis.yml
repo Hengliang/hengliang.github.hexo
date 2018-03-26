@@ -14,9 +14,9 @@ install:
 before_script:  
   - rm -rf themes
   - git clone https://github.com/Hengliang/hexo-theme-next.git --branch hengliang@develop.remote themes/next-door
-  - sed -i -e 's/#\[GA_TOKEN\]/\$\{GA_TOKEN\}/g' _config.yml
-  - sed -i -e 's/#\[LEANCLOUD_ID\]/\$\{LEANCLOUD_ID\}/g' _config.yml
-  - sed -i -e 's/#\[LEANCLOUD_KEY\]/\$\{LEANCLOUD_KEY\}/g' _config.yml
+  # - sed -i -e 's/#\[GA_TOKEN\]/\$\{GA_TOKEN\}/g' _config.yml
+  # - sed -i -e 's/#\[LEANCLOUD_ID\]/\$\{LEANCLOUD_ID\}/g' _config.yml
+  # - sed -i -e 's/#\[LEANCLOUD_KEY\]/\$\{LEANCLOUD_KEY\}/g' _config.yml
 
 script:
   - gulp build
@@ -45,11 +45,11 @@ env:
     # GH_TOKEN
     - secure: "P+Rov2CcAyjf0tSGmq+wNnH7OqrzoQF82YLOlFzBNkt7oXHhdFbAJlz4oTfZtaF5F/beJw3KNA+DgUlECdtJc1xBpNIoz5uaqpbHq/aeJc9tltIropCvGJ0MF75E5PmeSmV+a4nEw2CD/QoyxPNpI8Qq/p4NQY69D28T+eiMYClRppEVYaPteFwL7SwYXEVrywTOaZK4hvnuXBO0qZ37sQuQMa4qsj4udbxuMHvHjjqfbZiaDNfFmn+UghMGJYldxC/e4l2jNHd383hPzWhO84K8YFRY3iFHPeHvJhGkDJhkdJziTqyGS272FzFXipBPgNtp2IJeY3bwToy9bMASEoincNY5Fb3GM2e1jJ0K93+yFEgzh0joU6lG5xiI9Su3O6VsbkSXIyB+nfF0cY9Z4uSRu9+DSDF82BvLAoRbucHF0OrvGcFUNpLLYPiWY5drAmx+b4/WwUFKseHG22zV6j1Oqy0C9jm3ux1LIHdIXD2Xlqg7kJAh0ue1VI7jhXxpIkEMJV99tnXEZul5adpKhAjXBsYoH+LmUDgNt6fcdKrTybzNax3wUI7qvqltnA9t8EqPzL1KpQT+VKNMeAN8x0FHohBQ1cT8kE3tERioVUuFpYKss8wLKWU6D3oWQksZ3v4FGLbnXF5czChDbQIbkkRJlBIvVwP9b0d3heSkUm4="
     # GA_TOKEN
-    - GA_TOKEN: UA-76864579-2
+    # - GA_TOKEN: UA-76864579-2
     # LEANCLOUD_ID
-    - LEANCLOUND: X0Uz4jdNqtk7pz5GfmX9tm4F-gzGzoHsz
+    # - LEANCLOUND: X0Uz4jdNqtk7pz5GfmX9tm4F-gzGzoHsz
     # LEANCLOUD_KEY
-    - secure: "TFOelhLscr7yluKdrCrYFDxnMmgWAcPMTwlfzn/MvhIASWuy7N+5/hsasBXXimF7VfmzsC03qCR5q9hqC1h0iQACOCQocR/2OIZVbmtixCb2BCFFGkrhSLs81SNmXbOi0nNs93LlRVtxwrbM0g4Onm9aRBWgOWCZcdrGy1XjblX8QD47FTwzWFhf2t/Ouy+Gdq5UAOLypsuGrSznPfvWWnuk5v78knD5XuhErSNU1tjAGRfReLnhQJokdlh0OIUBzJGycP+kUI4aetX1D4UTzQivWnOmjzumwM2NZW4Q9paIPg2jd+6MDDVcNaD/JEUZ8FMRIB9+Z4rbAIpEgilUQfsY7qOWX1v+xjcQnLLnFr9mqwPuE8LQYut39IhWBBLFgXXIqyRdBi1ZzkE51cNKImSNdCCGGysuHQ01cM/coQEX+gVtMz4uajdQ9WZqe9WFzm6I0IzvF4zAspd6Rw6PJirZmZRhY+2NYKPbrovqe4m3sGwRwYdswM3M2d5PKGxyflTDEatJta3VSl/Xu8nazEi7i/vg46swXVW+6oJHxZBiKpKsmOqSjwZ17DYSm6XkqyWQHx7lHR1YnEL81v6b3Mc1KJRHNHfOfGaVGIHIf5/X5NznEBhLWSprZpNixfeOlcs/IhD60xVq+f+MLdr5+sgLvsQI+sK6QQN0qJ5cWEc="
+    # - secure: "TFOelhLscr7yluKdrCrYFDxnMmgWAcPMTwlfzn/MvhIASWuy7N+5/hsasBXXimF7VfmzsC03qCR5q9hqC1h0iQACOCQocR/2OIZVbmtixCb2BCFFGkrhSLs81SNmXbOi0nNs93LlRVtxwrbM0g4Onm9aRBWgOWCZcdrGy1XjblX8QD47FTwzWFhf2t/Ouy+Gdq5UAOLypsuGrSznPfvWWnuk5v78knD5XuhErSNU1tjAGRfReLnhQJokdlh0OIUBzJGycP+kUI4aetX1D4UTzQivWnOmjzumwM2NZW4Q9paIPg2jd+6MDDVcNaD/JEUZ8FMRIB9+Z4rbAIpEgilUQfsY7qOWX1v+xjcQnLLnFr9mqwPuE8LQYut39IhWBBLFgXXIqyRdBi1ZzkE51cNKImSNdCCGGysuHQ01cM/coQEX+gVtMz4uajdQ9WZqe9WFzm6I0IzvF4zAspd6Rw6PJirZmZRhY+2NYKPbrovqe4m3sGwRwYdswM3M2d5PKGxyflTDEatJta3VSl/Xu8nazEi7i/vg46swXVW+6oJHxZBiKpKsmOqSjwZ17DYSm6XkqyWQHx7lHR1YnEL81v6b3Mc1KJRHNHfOfGaVGIHIf5/X5NznEBhLWSprZpNixfeOlcs/IhD60xVq+f+MLdr5+sgLvsQI+sK6QQN0qJ5cWEc="
 
    
 # configure notifications (email, IRC, campfire etc)

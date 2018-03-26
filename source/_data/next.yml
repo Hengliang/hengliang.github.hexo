@@ -1,5 +1,4 @@
 # Configurations for the theme `Next`.
-## Need use Travis CI to replace placeholder variables.
 
 ### Foundation configs
 
@@ -80,11 +79,11 @@ disqus:
   count: true
 
 #### Google Analytics
-google_analytics: #[GA_TOKEN]
+google_analytics: UA-76864579-2
 
 #### Show number of visitors to each article.
 #### You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
   enable: true
-  app_id: #[LEANCLOUND_ID]
-  app_key: #[#LEANCLOUND_KEY]
+  app_id: X0Uz4jdNqtk7pz5GfmX9tm4F-gzGzoHsz
+  app_key: btmvNiWSsugTvKA15FrlrhmM

@@ -1,5 +1,6 @@
 ---
 title: Hello Hexo
+date: 2015-05-20 00:05:20
 tags:
   - hexo
 ---

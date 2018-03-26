@@ -41,7 +41,7 @@ branches:
 env:
   global:
     # GIT_PAGE_REF
-    - GIT_PAGE_REF: github.com/Hengliang/hengliang.github.io.git
+    - GIT_PAGE_REF: github.com/Hengliang/hengliang.github.io
     # GH_TOKEN
     - secure: "Hf7FFzn4sk1mFPkrZj/BQLlz436LdJz25oHArcoTJqenXNFmXYKh1+aRi1D4SyjEm+jHyasc0u4jB+YA40QUEo0A+u8ZXhBw4gq5St5SvaniELoMycQ6QCVxHl2dKZItQ6YZmrMPwHh6yOfShJgYA4IwUfMDTG2u/+7tXmRNcff4usR38Vbl4F52Sfly3sQLs7tRkzC4Pz6MCqox3sbbPAdW4t09rgTY0nkQzqzkur8/C5qlZYlU4HqvE4xjOyMWlXfP7hkQFY/Q4HkaL4F101rN8oRcEy5VqKI3U/cAEfR5uRHemnrdk68vzkGaeC1OyFpvpuo5Sr4ut3it2aS6PiZQTgub2CmEFArDEXwWWmdyzw52myQYP3wOGf7vZhl2xihUEkzUj7IIrfamgWdn0KT09c4oqQqOxTCQVsRB7B4YjpASQD942k03zokx6TBW3NNBk/0AM2Aytx4i93EglOhzNs98WKMiTmsxkin0MB/P5YzcdBMpH0J9bESs2P6UWF7eZ2/2pETgHlvkj0qX1T/3E+RNc7OgApr466IgWtLtuuD5AuEBMB/cmP5cC3NbOAiufur0Y1l/pVLZkA/WiXCWJcjM1WHOV5wV6qXU96ufIuuutQPOVaSM+/IHKj8VN10QYxan8TTsxEgX9VRNESqPsmD9NhaYMrZ+mbZW3v0="
     # GA_TOKEN

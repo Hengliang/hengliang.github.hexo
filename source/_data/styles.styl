@@ -1,5 +1,131 @@
+// Custom styles.
+
+kbd {
+    display: inline-block;
+    margin: 0 .1em;
+    padding: .1em .6em;
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-size: 11px;
+    line-height: 1.4;
+    color: #242729;
+    text-shadow: 0 1px 0 #FFF;
+    background-color: #e1e3e5;
+    border: 1px solid #adb3b9;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(12,13,14,0.2), 0 0 0 2px #FFF inset;
+    white-space: nowrap;
+}
+
 .posts-expand .post-body img {
-  box-sizing: content-box;
-  padding: 0;
-  border: none;
+  box-sizing: content-box !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+.posts-expand .fancybox img {
+  border: 0 ;
+}
+
+.posts-expand .post-tags {
+  margin-top: 40px;
+  text-align: center;
+
+  a {
+    display: inline;
+    margin-right: 10px;
+    font-size: 13px;
+    border-bottom: none;
+    border: 1px solid #CEE9F9;
+    padding: 4px;
+    background-color: #F4F7F8;
+    color: #37ABE3;
+    border-radius: 3px;
+  }
+}
+
+/* latin */
+@font-face {
+  font-family: 'Lobster Two';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lobster Two Bold Italic'), local('LobsterTwo-BoldItalic'), url(https://fonts.gstatic.com/s/lobstertwo/v9/LEkN2_no_6kFvRfiBZ8xpMyRwA4nzNmLFN68bwzDkMk.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+.site-title{
+    font-family: 'Lobster Two',"Microsoft YaHei",sans-serif;
+}
+.site-subtitle {
+  margin-top: -10px;
+}
+
+
+
+.site-state {
+  text-align: center;
+}
+
+.site-state-item-count {
+  display: inline-block;
+}
+
+.site-state-item {
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.site-state-item:first-child {
+  padding: 0 15px 0 0;
+  // text-align: center;
+}
+
+.links-of-author {
+  margin-top: 10px
+}
+
+
+
+.tag-cloud-tags {
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: none;
+  }
+}
+
+
+.posts-expand .post-title-link {
+  display: inline-block;
+  position: relative;
+  color: $black-light;
+  border-bottom: none;
+  line-height: 1.2;
+  vertical-align: top;
+  
+  &:hover {
+    color: #fe007f;
+  }
+
+  &::before {
+    content: "✐︎";
+    color: #fe007f;
+    position: absolute;
+    width: 0px;
+    height: 0%;
+    bottom: 0;
+    left: -28px;
+    top: 0;
+    background-color: #000;
+    visibility: hidden;
+    transform: scaleX(0);
+    the-transition();
+  }
+
+  &:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+  .fa { font-size: 16px; }
 }

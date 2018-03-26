@@ -1,5 +1,5 @@
 ---
-title: 'MacOS: How to hide the `Spotlight` icon in menubar'
+title: 'MacOS:怎样移除菜单栏上`Spotlight`的小图标'
 date: 2017-12-10 16:47:20
 tags:
   - mac
@@ -12,9 +12,15 @@ tags:
     }
 </style>
 
-![Mac Menubar](/resources/images/blog/mac/mac-menu-bar-101.png)
+(补充序言)
 
-如上图，为什么一定要隐藏掉`Spotlight`在`Menubar`中的那么一个<kbd><i class="fa fa-search"></i></kbd>小图标呢？
+在`MacOS`中`Spotlight`时一个非常有用且高效的功能，能够帮助我们快速的找到想要的资源。日常工作中，我们可以使用`^Space`快捷键直接呼出`Spotlight`的对话框，输入信息来查找资源。同样的效果，我们也可以点击菜单栏右上角的放大镜(<kbd><i class="fa fa-search"></i></kbd>)图标，呼出对话框。问题就在于，有了超级方便的`^Space`快捷键，右上角的放大镜就很鸡肋了。一个不能在超级黄金位置产生任何效益按钮，这就导致它在我的13寸的MPB上非常非常的扎眼，所以要想方设法除掉它。
+
+如果你也遇到了上述和我们一样的问题，以及自带中等偏上的强迫症发作，不妨看看我是怎么做的吧。
+
+(正文开始）
+
+为什么一定要隐藏掉`Spotlight`在`Menubar`中的那么一个<kbd><i class="fa fa-search"></i></kbd>小图标呢？
 
 ![Why](/resources/images/blog/sticker/emotion/why-101.jpg)
 

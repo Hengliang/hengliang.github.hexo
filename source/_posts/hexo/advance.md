@@ -1,5 +1,5 @@
 ---
-title: 'HEXO博客高级技巧'
+title: 'Hexo Tricks'
 date: 2016-05-21 22:12:38
 tags:
   - hexo

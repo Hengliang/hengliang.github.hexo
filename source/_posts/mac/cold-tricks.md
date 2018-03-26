@@ -1,5 +1,5 @@
 ---
-title: Mac冷门小技巧
+title: MacOS:冷门小技巧
 date: 2016-05-20 23:25:15
 tags: 
  - mac

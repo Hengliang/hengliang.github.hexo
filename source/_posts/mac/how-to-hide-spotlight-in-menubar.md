@@ -1,5 +1,5 @@
 ---
-title: 'Mac - How to hide the `Spotlight` icon in menubar'
+title: 'MacOS: How to hide the `Spotlight` icon in menubar'
 date: 2017-12-10 16:47:20
 tags:
   - mac

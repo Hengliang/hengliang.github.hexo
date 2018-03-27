@@ -3,8 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: "Mario's Home"
-subtitle: Tech &lt;<span style="color:#FE007F">❤</span>︎/&gt; Coffee
+title: TECHOFFEE
+# subtitle: Tech &lt;<span style="color:#FF0000">❤</span>︎/&gt; Coffee
+subtitle: Tech and Coffee
 description: Programming is Interesting
 author: Mario
 language: zh-Hans 

@@ -28,7 +28,16 @@ favicon:
 keywords: "Tech, Coffee, Mac, Programming"
 
 footer:
-  icon: heart
+  # Icon between year and copyright info.
+  icon: 
+    # Icon name in fontawesome, see: https://fontawesome.com/v4.7.0/icons
+    # `heart` is recommended with animation in red (#ff0000).
+    name: heart
+    # If you want to animate the icon, set it to true.
+    animated: true
+    # Change the color of icon, using Hex Code.
+    color: "#FF0000"
+
   copyright: MARIO
   # -------------------------------------------------------------
   # Hexo link (Powered by Hexo).

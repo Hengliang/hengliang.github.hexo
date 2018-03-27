@@ -42,6 +42,7 @@ tags:
 
 <video id="video-customized-avatar" controls 
     width="100%"
+    preload="metadata"
     src="http://7xrkrd.com1.z0.glb.clouddn.com/how-to-change-avatar.mp4">
 </video>
 

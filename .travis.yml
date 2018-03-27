@@ -33,6 +33,7 @@ after_success:
   - git commit -m "Travis CI build"
   - git push --force "https://${GH_TOKEN}@${GIT_PAGE_REF}" master:master
   # if it isn't a user/org page, please replace it with <master:gh-pages>
+  - git push --force "https://hengliang:${CODING_TOKEN}@${CODING_PAGE_REF}" master:master
   
 
 branches:
@@ -43,10 +44,22 @@ branches:
 # https://docs.travis-ci.com/user/environment-variables
 env:
   global:
+    # Github Environment Variables
+    # ----------------------------------------------------------
     # GIT_PAGE_REF
     - GIT_PAGE_REF: github.com/Hengliang/hengliang.github.io
     # GH_TOKEN
     - secure: "P+Rov2CcAyjf0tSGmq+wNnH7OqrzoQF82YLOlFzBNkt7oXHhdFbAJlz4oTfZtaF5F/beJw3KNA+DgUlECdtJc1xBpNIoz5uaqpbHq/aeJc9tltIropCvGJ0MF75E5PmeSmV+a4nEw2CD/QoyxPNpI8Qq/p4NQY69D28T+eiMYClRppEVYaPteFwL7SwYXEVrywTOaZK4hvnuXBO0qZ37sQuQMa4qsj4udbxuMHvHjjqfbZiaDNfFmn+UghMGJYldxC/e4l2jNHd383hPzWhO84K8YFRY3iFHPeHvJhGkDJhkdJziTqyGS272FzFXipBPgNtp2IJeY3bwToy9bMASEoincNY5Fb3GM2e1jJ0K93+yFEgzh0joU6lG5xiI9Su3O6VsbkSXIyB+nfF0cY9Z4uSRu9+DSDF82BvLAoRbucHF0OrvGcFUNpLLYPiWY5drAmx+b4/WwUFKseHG22zV6j1Oqy0C9jm3ux1LIHdIXD2Xlqg7kJAh0ue1VI7jhXxpIkEMJV99tnXEZul5adpKhAjXBsYoH+LmUDgNt6fcdKrTybzNax3wUI7qvqltnA9t8EqPzL1KpQT+VKNMeAN8x0FHohBQ1cT8kE3tERioVUuFpYKss8wLKWU6D3oWQksZ3v4FGLbnXF5czChDbQIbkkRJlBIvVwP9b0d3heSkUm4="
+
+    # Coding Environment Variables
+    # ----------------------------------------------------------
+    # CODING_PAGE_REF
+    - CODING_PAGE_REF: git.coding.net/hengliang/hengliang.coding.io.git
+    # CODING_TOKEN
+    - secure: "C6XupvKXGdyIxWzG8HnLyjOK/2JborVpmt3QzEmhDSOuLsf3PUl9j69Uu6ISiOarw87Y08W5/xvByPkr2X/hvqr1RGeMVx7irzJLmR0qVxnRERCkw/TKVqOVXGtFQ0SHCIfeVDmRwne17zWguOLq4fzobBTj2s0aApBSlQH7PR8YIKcGVX0OyrkMJVYO7SK302+Bz2BdBlkpytYJq3tNARoBjDNnxSO5Nc3FSmzAtsGck+5t2G21D7ExIAAUP3P9PKkdJCVbJpo+HIny57A/GWXcl+VkxAwiQ2Mi5JBa9YmdVHyP/fU1qrItUAHOcRszZWjxHqWyBTOUAscOnAeD6LJEl5kZ1DrN1Ot7YunputoWag5TkWyhkkzFxZnWxaHRSPGmX6JWnx9cAV2cGc7BlTOXpETCe1GVFxp9MEmkbLaAYNPsAzdkf4U99MsT06XyErdq3c1pdztqabPYW4Z6fo++wot+CkM4+eY+kGn1mdRddXXVOqL5DeugR21TZHwSrSsdgNBIvqorgy7rAxJ3M16Xs8ua3LcioP89Nl8koxyKe8luBQwS6JglSRKlYFYcOzsC8XeOBe1gaoJ8iyOzC6S5BOrKInMuGffIQrLcubIMUPfDOIvA0F6aTRlHl6YwxvQ8eU8G62CGA/DGHbWZADQ+6WWgAgt1IypZfOt1aqs="
+
+    # Third Party Services Environment Variables
+    # ----------------------------------------------------------
     # GA_TOKEN
     # - GA_TOKEN: UA-76864579-2
     # LEANCLOUD_ID

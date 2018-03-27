@@ -104,3 +104,35 @@ leancloud_visitors:
   enable: false
   app_id: # ...
   app_key: # ...
+
+
+## Effects
+
+# Added switch option for separated repo in 6.0.0.
+# Dependencies: https://github.com/theme-next/theme-next-fastclick
+fastclick: true
+
+# Added switch option for separated repo in 6.0.0.
+# Dependencies: https://github.com/theme-next/theme-next-jquery-lazyload
+lazyload: true
+
+# Progress bar in the top during page loading.
+# Dependencies: https://github.com/theme-next/theme-next-pace
+pace: true
+# Themes list:
+#pace-theme-big-counter
+#pace-theme-bounce
+#pace-theme-barber-shop
+#pace-theme-center-atom
+#pace-theme-center-circle
+#pace-theme-center-radar
+#pace-theme-center-simple
+#pace-theme-corner-indicator
+#pace-theme-fill-left
+#pace-theme-flash
+#pace-theme-loading-bar
+#pace-theme-mac-osx
+#pace-theme-minimal
+# For example
+# pace_theme: pace-theme-center-simple
+pace_theme: pace-theme-minimal

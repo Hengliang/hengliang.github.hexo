@@ -1,5 +1,18 @@
 // Custom styles.
 
+.pace .pace-progress {
+  height: 3px;
+  background-color: #B05635;
+}
+
+body {
+  background-color: #F2EFEA;
+}
+
+h1,h2 {
+  color: #7f0019;
+}
+
 kbd {
     display: inline-block;
     margin: 0 .1em;
@@ -16,17 +29,32 @@ kbd {
     white-space: nowrap;
 }
 
-.posts-expand .post-title-link {
-  font-size: 26px;
-  font-weight: 300;
+.site-meta {
+  background-color: #7f0019;
 }
-.post-body {
-  font-weight: 300;
-  font-size: 15px;
+
+.header-inner {
+  background-color: #FCFBF6;
 }
 
 .headband {
   background: none;
+}
+
+.post-block {
+  background-color: #FDFDFD;
+}
+.post-body {
+  font-weight: 300;
+  font-size: 15px;
+
+  h1,h2 {
+    color: #555;
+  }
+}
+
+.sidebar-inner {
+  background-color: #FCFBF6;
 }
 .sidebar-inner.affix {
   top: 0;
@@ -105,14 +133,17 @@ kbd {
   border-bottom: none;
   line-height: 1.2;
   vertical-align: top;
+  font-size: 26px;
+  font-weight: 600;
+  color: #7f0019;
   
   &:hover {
-    color: #fe007f;
+    color: #7f0019;
   }
 
   &::before {
-    /* content: "✐︎"; */
-    color: #fe007f;
+    content: "";
+    color: #7f0019;
     position: absolute;
     width: 0px;
     height: 0%;

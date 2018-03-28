@@ -58,9 +58,9 @@ gulp.task('minify-js', function() {
 });
 
 gulp.task('minify-img', function() {
-    return gulp.src('./public/images/*')
+    return gulp.src('./public/resources/**/*.png')
         .pipe(imagemin())
-        .pipe(gulp.dest('./public/images'))
+        .pipe(gulp.dest('./public/resources'))
 })
 
 gulp.task('compress', function(cb) {

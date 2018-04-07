@@ -63,7 +63,7 @@ index_with_subtitle: true
 
 menu:
   home: / || home
-  #about: /about/ || user
+  # about: /about/ || user
   tags: /tags/ || tags
   categories: /categories/ || th
   archives: /archives/ || archive
@@ -81,7 +81,10 @@ scheme: Gemini
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
   GitHub: https://github.com/Hengliang || github
+  OnlineTools: http://tools.techoffee.me || puzzle-piece
   EMail: mailto:hengliang.jia@gmail.com || envelope
+  Music: https://music.163.com/#/user/home?id=299181598 || music
+  
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif

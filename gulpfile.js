@@ -1,12 +1,15 @@
-var gulp = require('gulp');
-var minifycss = require('gulp-clean-css');
-var uglify = require('gulp-uglify');
-var htmlmin = require('gulp-htmlmin');
-var htmlclean = require('gulp-htmlclean');
-var imagemin = require('gulp-imagemin');
-var del = require('del');
-var runSequence = require('run-sequence');
-var Hexo = require('hexo');
+const gulp = require('gulp');
+const minifycss = require('gulp-clean-css');
+const uglify = require('gulp-uglify');
+const htmlmin = require('gulp-htmlmin');
+const htmlclean = require('gulp-htmlclean');
+const imagemin = require('gulp-imagemin');
+const imageminJpegRecompress = require('imagemin-jpeg-recompress');
+const imageminPngquant = require('imagemin-pngquant');
+const imageminMozjpeg = require('imagemin-mozjpeg');
+const del = require('del');
+const runSequence = require('run-sequence');
+const Hexo = require('hexo');
 
 
 gulp.task('clean', function() {
@@ -14,7 +17,7 @@ gulp.task('clean', function() {
 });
 
 // generate html with 'hexo generate'
-var hexo = new Hexo(process.cwd(), {});
+const hexo = new Hexo(process.cwd(), {});
 gulp.task('generate', function(cb) {
     hexo.init().then(function() {
         return hexo.call('generate', {
@@ -57,10 +60,15 @@ gulp.task('minify-js', function() {
         .pipe(gulp.dest('./public'));
 });
 
+// [Proper configuration of imagemin plugins](https://github.com/sindresorhus/gulp-imagemin/issues/190)
+// [Images are not getting compressed to a great extent](https://github.com/imagemin/imagemin/issues/246)
 gulp.task('minify-img', function() {
-    return gulp.src('./public/resources/**/*.png')
-        .pipe(imagemin())
-        .pipe(gulp.dest('./public/resources'))
+    return gulp.src('./public/resources/images/**/*')
+        .pipe(imagemin(
+          [imageminPngquant(), imageminMozjpeg()],
+          {verbose: true}
+        ))
+        .pipe(gulp.dest('./public/resources/images'))
 })
 
 gulp.task('compress', function(cb) {

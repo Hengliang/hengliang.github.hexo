@@ -4,9 +4,9 @@ const uglify = require('gulp-uglify');
 const htmlmin = require('gulp-htmlmin');
 const htmlclean = require('gulp-htmlclean');
 const imagemin = require('gulp-imagemin');
-const imageminJpegRecompress = require('imagemin-jpeg-recompress');
+// const imageminJpegRecompress = require('imagemin-jpeg-recompress');
 const imageminPngquant = require('imagemin-pngquant');
-const imageminMozjpeg = require('imagemin-mozjpeg');
+// const imageminMozjpeg = require('imagemin-mozjpeg');
 const del = require('del');
 const runSequence = require('run-sequence');
 const Hexo = require('hexo');
@@ -65,7 +65,7 @@ gulp.task('minify-js', function() {
 gulp.task('minify-img', function() {
     return gulp.src('./public/resources/images/**/*')
         .pipe(imagemin(
-          [imageminPngquant(), imageminMozjpeg()],
+          [imageminPngquant() /*, imageminMozjpeg() */],
           {verbose: true}
         ))
         .pipe(gulp.dest('./public/resources/images'))

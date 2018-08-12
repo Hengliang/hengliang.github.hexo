@@ -10,7 +10,9 @@ cache:
     # The `next-door` from `hengliang.github.hexo-theme-next`
     - themes/next-door
 
-before_install: if [[ `npm -v` != 5.8.0 ]]; then npm i -g npm@5.8.0; fi
+before_install: 
+  - if [[ `npm -v` != 5.8.0 ]]; then npm i -g npm@5.8.0; fi
+  - apt-get install libpng16-dev
 
 install:
   - npm install
